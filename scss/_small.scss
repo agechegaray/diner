@@ -92,11 +92,11 @@ nav {
     }
 
     ul.menuLinks li.active a {
-        color: $secondaryColor;
+        border-bottom: 3px solid $tertiaryColor;
     }
 
     ul.menuLinks li a:hover {
-        text-decoration: underline;
+        border-bottom: 3px solid $secondaryColor;
     }
 }
 
@@ -108,7 +108,7 @@ main {
     div.allCards {
         padding: 0 $gutter;
         section {
-            border: 2px solid $tertiaryColor;
+            border: 2px solid #42280e;
             border-radius: 10px;
             overflow: hidden;
             margin: 1rem 0rem;
@@ -117,10 +117,10 @@ main {
                 padding: 1rem $gutter;
             }
             h2 {
-                background-color: $tertiaryColor;
+                background-color: #42280e;
                 font-size: 1.5rem;
                 text-align: center;
-                color: #fff;
+                color: $tertiaryColor;
             }
     
             img {
@@ -144,7 +144,7 @@ main {
                 text-align: center;
                 margin: 0 3rem 1rem 3rem;
                 border-radius: 8px;
-                color: white;
+                color: $tertiaryColor;
                 text-decoration: none;
             }
         }
@@ -155,21 +155,22 @@ main {
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-    background-color: $primaryColor
+    background-color: $primaryColor;
 } // end footer wrapper
 
 footer {
     padding: .5rem $gutter;
+    color: $tertiaryColor;
     section.contact {
             p {
                 font-size: 1.2rem;
                 margin: .5rem;
                 ion-icon {
-                    color: $secondaryColor;
+                    color: $tertiaryColor;
                     padding-right: 10px;
                 }
                 a {
-                    color: black;
+                    color: $tertiaryColor;
                     text-decoration: none;
                 }
             }
@@ -183,16 +184,17 @@ footer {
             font-size: 3rem;
             margin: .5rem;
             padding: .5rem;
-            color: $secondaryColor;
+            color: $tertiaryColor;
 
             &:hover {
-                color: #fff;
+                color: $secondaryColor;
             }
         }
     }
 
     section.location {
         font-size: 1.5rem;
+        color: $tertiaryColor;
     }
 
     p.legal {
@@ -200,5 +202,6 @@ footer {
         padding: 1rem;
         font-weight: $lightWeight;
         text-align: center;
+        color: $tertiaryColor;
     }
 }// end footer

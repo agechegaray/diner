@@ -385,10 +385,10 @@ nav ul.menuLinks li a {
   font-weight: 300;
 }
 nav ul.menuLinks li.active a {
-  color: #000000;
+  border-bottom: 3px solid #ffffff;
 }
 nav ul.menuLinks li a:hover {
-  text-decoration: underline;
+  border-bottom: 3px solid #000000;
 }
 
 /* --------------------------- MAIN --------------------------- */
@@ -412,7 +412,7 @@ main div.allCards section h2 {
   background-color: #42280e;
   font-size: 1.5rem;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 main div.allCards section img {
   width: 100%;
@@ -433,7 +433,7 @@ main div.allCards section a {
   text-align: center;
   margin: 0 3rem 1rem 3rem;
   border-radius: 8px;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -444,17 +444,18 @@ main div.allCards section a {
 
 footer {
   padding: 0.5rem 16px;
+  color: #ffffff;
 }
 footer section.contact p {
   font-size: 1.2rem;
   margin: 0.5rem;
 }
 footer section.contact p ion-icon {
-  color: #000000;
+  color: #ffffff;
   padding-right: 10px;
 }
 footer section.contact p a {
-  color: black;
+  color: #ffffff;
   text-decoration: none;
 }
 footer section.social {
@@ -466,19 +467,21 @@ footer section.social a {
   font-size: 3rem;
   margin: 0.5rem;
   padding: 0.5rem;
-  color: #000000;
+  color: #ffffff;
 }
 footer section.social a:hover {
-  color: #fff;
+  color: #000000;
 }
 footer section.location {
   font-size: 1.5rem;
+  color: #ffffff;
 }
 footer p.legal {
   margin: 0;
   padding: 1rem;
   font-weight: 300;
   text-align: center;
+  color: #ffffff;
 }
 
 @media only screen and (min-width: 35rem) {
