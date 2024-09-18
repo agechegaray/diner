@@ -1,0 +1,31 @@
+/* NAVIGATION STUFF GOES HERE  */
+nav {
+    #myButton {
+        display: none;
+    }
+
+    ul.menuLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+/* MAIN */
+main {
+    div.allCards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: $gutter;
+        section {
+            flex-basis: calc(33.3333% - (($gutter*2)/3));
+        }
+    }
+}
+
+/* FOOTER */
+footer div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

@@ -1,0 +1,204 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+    span {
+        font-size: 1.6rem;
+        font-weight: $boldWeight;
+        color: $secondaryColor;
+    }
+} // end header
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+#navWrapper {
+    background-color: #fff;
+}
+
+nav {
+    background-color: $primaryColor;
+    /* Default state for hamburger icon */
+    #myButton {
+        border: none;
+        background: none;
+        color: white;
+        font-size: 2rem;
+        padding: 0;
+        width: 44px;
+        height: 44px;
+        font-weight: $lightWeight;
+        cursor: pointer;
+        position: relative;
+    }
+
+    #myButton::before {
+        content: "\2630"; // Unicode for hamburger icon
+        display: block;
+    }
+
+    /* State when menu is open */
+    #myButton.open::before {
+        content: "\00d7"; // Unicode for "X" icon
+    }
+
+    /* Menu styling */
+    ul.menuLinks {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+        flex-direction: column;
+        width: 100%; // adjust as necessary
+    }
+
+    ul.menuLinks.open {
+        display: flex; // or block, depending on your layout
+    }
+
+    ul.menuLinks li {
+        padding: 1rem;
+    }
+
+    ul.menuLinks li a {
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #fff;
+        font-weight: $lightWeight;
+    }
+
+    ul.menuLinks li.active a {
+        color: $secondaryColor;
+    }
+
+    ul.menuLinks li a:hover {
+        text-decoration: underline;
+    }
+}
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    h1 {
+        padding: 1rem;
+    }
+    div.allCards {
+        padding: 0 $gutter;
+        section {
+            border: 2px solid $tertiaryColor;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 1rem 0rem;
+            h2, p {
+                margin: 0;
+                padding: 1rem $gutter;
+            }
+            h2 {
+                background-color: $tertiaryColor;
+                font-size: 1.5rem;
+                text-align: center;
+                color: #fff;
+            }
+    
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            img.e2e {
+                padding: 0;
+            }
+            
+            p {
+                font-style: italic;
+                color: $secondaryColor;
+            }
+
+            a {
+                display: block;
+                background-color: $primaryColor;
+                padding: .75rem;
+                text-align: center;
+                margin: 0 3rem 1rem 3rem;
+                border-radius: 8px;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}// end main
+
+
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: $primaryColor
+} // end footer wrapper
+
+footer {
+    padding: .5rem $gutter;
+    section.contact {
+            p {
+                font-size: 1.2rem;
+                margin: .5rem;
+                ion-icon {
+                    color: $secondaryColor;
+                    padding-right: 10px;
+                }
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+
+    section.social {
+        display: flex;
+        justify-content: center;
+        a {
+            display: block;
+            font-size: 3rem;
+            margin: .5rem;
+            padding: .5rem;
+            color: $secondaryColor;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    section.location {
+        font-size: 1.5rem;
+    }
+
+    p.legal {
+        margin: 0;
+        padding: 1rem;
+        font-weight: $lightWeight;
+        text-align: center;
+    }
+}// end footer
